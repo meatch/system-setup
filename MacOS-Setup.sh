@@ -186,3 +186,6 @@ if [ -f "~/Library/Application Support/Code/User/snippet/c1.code-snippets" ]; th
 else
     echo "VS Code: Add Snippets"
 fi
+
+# Git clone app to desktop
+git clone https://github.com/meatch/Web-Starter-Project.git ~/Desktop/Web1-Lastname-First-Final
