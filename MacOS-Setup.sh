@@ -181,11 +181,17 @@ echo "VS Code: Install Plugins"
 # code --install-extension ziyasal.vscode-open-in-github
 
 # VS Code Snippets
-if [ -f "~/Library/Application Support/Code/User/snippet/c1.code-snippets" ]; then
+if [ -f "$HOME/Library/Application Support/Code/User/snippet/c1.code-snippets" ]; then
     echo "VS Code: Snippets Already Installed"
 else
     echo "VS Code: Add Snippets"
 fi
 
-# Git clone app to desktop
+echo "Web Starter Project: Git clone app to desktop"
 git clone https://github.com/meatch/Web-Starter-Project.git ~/Desktop/Web1-Lastname-First-Final
+
+echo "Web Starter Project: remove .git versioning from project"
+rm -rf ~/Desktop/Web1-Lastname-First-Final/.git
+
+echo "Web Starter Project: Open Desktop in Finder"
+open ~/Desktop
