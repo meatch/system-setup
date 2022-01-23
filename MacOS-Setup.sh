@@ -181,10 +181,15 @@ echo "VS Code: Install Plugins"
 # code --install-extension ziyasal.vscode-open-in-github
 
 # VS Code Snippets
-if [ -f "$HOME/Library/Application Support/Code/User/snippet/c1.code-snippets" ]; then
+if [ -d "$HOME/Library/Application Support/Code/User/snippets" ]; then
     echo "VS Code: Snippets Already Installed"
 else
     echo "VS Code: Add Snippets"
+
+    mkdir "$HOME/Library/Application Support/Code/User/snippets"
+    curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true > "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
+    unzip "$HOME/Library/Application Support/Code/User/snippets/temp.zip" -d "$HOME/Library/Application Support/Code/User/snippets"
+    rm "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
 fi
 
 echo "Web Starter Project: Git clone app to desktop"
