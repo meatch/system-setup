@@ -78,27 +78,23 @@ else
     echo -e "# VS Code code command\nexport PATH=\"\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin\"\n\n$(cat ~/.zshrc)" > ~/.zshrc
 fi
 
-# TODO: Find a way to re-source ~/.zshrc
-# Problem: commands like code and NVM will not be available without creating a new shell.
-# Tried source ~/.zshrc without any luck
-# Manually sourcing these for now.
-
-# VS Code code command
+# Manual sourcing of VS Code code command
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin"
 
-# NVM Support
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
 
 ###################
 # Install the rest of the Apps we need.
 ###################
-if [[ -s $HOME/.nvm/nvm.sh ]] ; then
+if [[ -f $HOME/.nvm/nvm.sh ]] ; then
+    echo "NVM already Installed"
+else
     echo "Install NVM"
     brew install nvm
-else
-    echo "NVM already Installed"
 fi
+
+# Manual Sourcing of NVM Support
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
 
 echo "NVM: Install Node Version 14"
 nvm install 14
