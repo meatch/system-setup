@@ -1,0 +1,26 @@
+{
+    "security.workspace.trust.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "dashboard.projectData": null,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        }
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "bracketPairColorizer.depreciation-notice": false,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 1,
+    "explorer.compactFolders": false
+}

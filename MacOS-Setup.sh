@@ -125,6 +125,8 @@ else
     brew install visual-studio-code
 fi
 
+# VS Code Settings
+curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json > "$HOME/Library/Application Support/Code/User/settings.json"
 
 # VS Code Plugins
 echo "VS Code: Install Plugins"
