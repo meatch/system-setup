@@ -62,10 +62,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 * [*Yarn Download Installer*](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 ## 4. Install VS Code Extensions
+run the following command in your new Bash Terminal.
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
+```
 
-## 4. Manually Install Settings
+## 5. Manually Install Settings
 We will manually add these to your windows system together.
 
-[Download VS Code snippets.zip](https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true)
-[VS Code settings.json](https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json)
+* [Download VS Code snippets.zip](https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true)
+* [VS Code settings.json](https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json)
