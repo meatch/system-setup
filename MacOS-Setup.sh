@@ -27,9 +27,6 @@ echo "MacOS: Pre-Setup: Installing MacOS Terminal And App Management Software"
 echo "Install or Update Homebrew"
 which -s brew
 if [[ $? != 0 ]] ; then
-    echo "Install xcode command line tools"
-
-    xcode-select --install
     echo "Install Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
