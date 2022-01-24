@@ -147,4 +147,4 @@ echo "Web Starter Project: remove .git versioning from project"
 rm -rf ~/Desktop/Web1-Lastname-First-Final/.git
 
 echo "Web Starter Project: Open Desktop in Finder"
-code ~/Desktop/Web1-Lastname-First-Final
+open ~/Desktop/Web1-Lastname-First-Final
