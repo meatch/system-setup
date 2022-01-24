@@ -70,12 +70,12 @@ else
     echo -e "# NVM Support\nexport NVM_DIR=\"\$HOME/.nvm\"\nsource \$(brew --prefix nvm)/nvm.sh\n\n$(cat ~/.zshrc)" > ~/.zshrc
 fi
 
-# VS Code Support
+# VS Code Support and Homebrew Support
 if grep -q "Applications/Visual" ~/.zshrc; then
     echo "Update .zshrc: Already Exists: VS Code shell code command"
 else
-    echo "Update .zshrc: Add VS Code shell code command"
-    echo -e "# VS Code code command\nexport PATH=\"\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin\"\n\n$(cat ~/.zshrc)" > ~/.zshrc
+    echo "Update .zshrc: Add VS Code shell code command and Homebrew Path"
+    echo -e "# VS Code code command\nexport PATH=\"\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin\"\n\n$(cat ~/.zshrc)" > ~/.zshrc
 fi
 
 # TODO: Find a way to re-source ~/.zshrc
