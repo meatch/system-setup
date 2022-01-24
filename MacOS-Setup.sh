@@ -84,7 +84,7 @@ fi
 # Manually sourcing these for now.
 
 # VS Code code command
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin"
 
 # NVM Support
 export NVM_DIR="$HOME/.nvm"
