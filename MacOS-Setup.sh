@@ -125,7 +125,7 @@ fi
 curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json > "$HOME/Library/Application Support/Code/User/settings.json"
 
 # VS Code Plugins
-echo "VS Code: Install Extensions"
+echo "VS Code: Install Extensions: https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
 
 # VS Code Snippets
