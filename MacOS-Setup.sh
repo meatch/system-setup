@@ -191,7 +191,7 @@ code --install-extension yzhang.markdown-all-in-one
 code --install-extension ziyasal.vscode-open-in-github
 
 # VS Code Snippets
-if [ -d "$HOME/Library/Application Support/Code/User/snippets" ]; then
+if [ -f "$HOME/Library/Application Support/Code/User/snippets/c1.code-snippets" ]; then
     echo "VS Code: Snippets Already Installed"
 else
     echo "VS Code: Add Snippets"
