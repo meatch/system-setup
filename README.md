@@ -7,11 +7,15 @@ This repo is used to help set up with the latest tools for Web Development
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/MacOS-Setup.sh)"
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 If you run into issues installing Brew, most likely `XCode Command Line Tools` have yet to be installed.
 
 Try the following, and after installing `XCode Command Line Tools` try the brew MacOs setup installation again.
+
+```
+xcode-select --install
+```
 
 
 ## Windows Setup
