@@ -125,65 +125,8 @@ fi
 curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json > "$HOME/Library/Application Support/Code/User/settings.json"
 
 # VS Code Plugins
-echo "VS Code: Install Plugins"
-code --install-extension aaron-bond.better-comments
-code --install-extension alefragnani.Bookmarks
-code --install-extension ban.spellright
-code --install-extension bradgashler.htmltagwrap
-code --install-extension calebporzio.better-phpunit
-code --install-extension christian-kohler.path-intellisense
-code --install-extension cjhowe7.laravel-blade
-code --install-extension CoenraadS.bracket-pair-colorizer
-code --install-extension demijollamaxime.bulma
-code --install-extension diigu.copywithline
-code --install-extension donjayamanne.githistory
-code --install-extension DotJoshJohnson.xml
-code --install-extension eamodio.gitlens
-code --install-extension ecodes.vscode-phpmd
-code --install-extension EQuimper.react-native-react-redux
-code --install-extension esbenp.prettier-vscode
-code --install-extension felixfbecker.php-debug
-code --install-extension felixfbecker.php-intellisense
-code --install-extension felixfbecker.php-pack
-code --install-extension gencer.html-slim-scss-css-class-completion
-code --install-extension GrapeCity.gc-excelviewer
-code --install-extension Gruntfuggly.todo-tree
-code --install-extension HookyQR.JSDocTagComplete
-code --install-extension huizhou.githd
-code --install-extension humao.rest-client
-code --install-extension joelday.docthis
-code --install-extension jpoissonnier.vscode-styled-components
-code --install-extension kokororin.vscode-phpfmt
-code --install-extension kruemelkatze.vscode-dashboard
-code --install-extension lamartire.git-indicators
-code --install-extension michelemelluso.code-beautifier
-code --install-extension mikestead.dotenv
-code --install-extension mrmlnc.vscode-scss
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension ms-mssql.mssql
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension ms-vscode.Theme-MarkdownKit
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension neilbrayfield.php-docblocker
-code --install-extension oderwat.indent-rainbow
-code --install-extension onecentlin.laravel-blade
-code --install-extension sadesyllas.vscode-workspace-switcher
-code --install-extension Shan.code-settings-sync
-code --install-extension SirTori.indenticator
-code --install-extension sleistner.vscode-fileutils
-code --install-extension techer.open-in-browser
-code --install-extension teclado.vscode-nginx-format
-code --install-extension TimonVS.ReactSnippetsStandard
-code --install-extension tomoki1207.pdf
-code --install-extension vscode-icons-team.vscode-icons
-code --install-extension waderyan.gitblame
-code --install-extension wayou.vscode-todo-highlight
-code --install-extension william-voyek.vscode-nginx
-code --install-extension xabikos.JavaScriptSnippets
-code --install-extension yassh.copy-with-line-numbers
-code --install-extension yzane.markdown-pdf
-code --install-extension yzhang.markdown-all-in-one
-code --install-extension ziyasal.vscode-open-in-github
+echo "VS Code: Install Extensions"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
 
 # VS Code Snippets
 if [ -f "$HOME/Library/Application Support/Code/User/snippets/c1.code-snippets" ]; then
