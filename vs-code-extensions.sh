@@ -1,4 +1,3 @@
-#!/bin/bash
 code --install-extension aaron-bond.better-comments
 code --install-extension alefragnani.Bookmarks
 code --install-extension ban.spellright
@@ -15,17 +14,13 @@ code --install-extension eamodio.gitlens
 code --install-extension ecodes.vscode-phpmd
 code --install-extension EQuimper.react-native-react-redux
 code --install-extension esbenp.prettier-vscode
-code --install-extension felixfbecker.php-debug
-code --install-extension felixfbecker.php-intellisense
-code --install-extension felixfbecker.php-pack
 code --install-extension gencer.html-slim-scss-css-class-completion
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension HookyQR.JSDocTagComplete
 code --install-extension huizhou.githd
 code --install-extension humao.rest-client
-code --install-extension joelday.docthis
-code --install-extension jpoissonnier.vscode-styled-components
+code --install-extension janisdd.vscode-edit-csv
 code --install-extension kokororin.vscode-phpfmt
 code --install-extension kruemelkatze.vscode-dashboard
 code --install-extension lamartire.git-indicators
@@ -33,7 +28,9 @@ code --install-extension michelemelluso.code-beautifier
 code --install-extension mikestead.dotenv
 code --install-extension mrmlnc.vscode-scss
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-mssql.data-workspace-vscode
 code --install-extension ms-mssql.mssql
+code --install-extension ms-mssql.sql-database-projects-vscode
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.Theme-MarkdownKit
 code --install-extension msjsdiag.debugger-for-chrome
@@ -44,16 +41,21 @@ code --install-extension sadesyllas.vscode-workspace-switcher
 code --install-extension Shan.code-settings-sync
 code --install-extension SirTori.indenticator
 code --install-extension sleistner.vscode-fileutils
+code --install-extension styled-components.vscode-styled-components
 code --install-extension techer.open-in-browser
 code --install-extension teclado.vscode-nginx-format
 code --install-extension TimonVS.ReactSnippetsStandard
+code --install-extension tommasov.hosts
 code --install-extension tomoki1207.pdf
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension waderyan.gitblame
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension william-voyek.vscode-nginx
 code --install-extension xabikos.JavaScriptSnippets
+code --install-extension xdebug.php-debug
+code --install-extension xdebug.php-pack
 code --install-extension yassh.copy-with-line-numbers
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension ziyasal.vscode-open-in-github
+code --install-extension zobo.php-intellisense
