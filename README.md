@@ -1,5 +1,5 @@
 # System Setup
-This repo is used to help set up with the latest tools for Web Development
+This repo is used to help set up the latest tools for Web Development
 
 ## MacOS Set Up
 
