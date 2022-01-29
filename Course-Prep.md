@@ -21,6 +21,4 @@ Copy contents of `User/settings.json` into `vs-code-settings.json`
 code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
-2. Update vs-d
-
-https://gist.github.com/meatch/fe7bc147cf31a2c20ba0c92771942174
+2. Update `vs-code-extensions.sh` <----
