@@ -21,6 +21,36 @@ fi
 
 echo "MacOS: Pre-Setup: Installing MacOS Terminal And App Management Software"
 
+function wordUpperCaseFirst {
+    echo $(tr '[:lower:]' '[:upper:]' <<< ${1:0:1})${1:1}
+}
+
+function toLowerCase {
+    tr [:upper:] [:lower:] <<< "${*}"
+}
+
+function toTitleCase {
+    lowercase=$(toLowerCase $1)
+    title=$(wordUpperCaseFirst $lowercase)
+    echo $title
+}
+
+
+###################
+# Capture User Details in bash prompt 
+###################
+read -p "Enter your First Name: " userfirstname
+ufname=$(toTitleCase $userfirstname)
+
+read -p "Enter your Last Name: " userlastname
+ulname=$(toTitleCase $userlastname)
+
+read -p "Enter your Email: " useremail
+uemail=$(toLowerCase $useremail)
+
+echo "User Details: Name: $ufname $ulname, Email: $uemail"
+
+
 ###################
 # Homebrew 
 ###################
@@ -140,11 +170,29 @@ else
     rm "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
 fi
 
+###################
+# Update Git Author and Email
+###################
+
+# Update Git Author Full Name
+git config --global user.name "$ufname $ulname"
+
+# Update Git Author Email
+git config --global user.email "$uemail"
+
+
+###################
+# Web Starter Project
+###################
+finalFolder="$HOME/Desktop/Web1-$ulname-$ufname-Final"
+
+echo "Your Final Folder: $finalFolder"
+
 echo "Web Starter Project: Git clone app to desktop"
-git clone https://github.com/meatch/Web-Starter-Project.git ~/Desktop/Web1-Lastname-First-Final
+git clone https://github.com/meatch/Web-Starter-Project.git $finalFolder
 
 echo "Web Starter Project: remove .git versioning from project"
-rm -rf ~/Desktop/Web1-Lastname-First-Final/.git
+rm -rf "$finalFolder/.git"
 
-echo "Web Starter Project: Open Desktop in Finder"
-open ~/Desktop/Web1-Lastname-First-Final
+echo "Web Starter Project: Open $finalFolder in Finder"
+open $finalFolder
