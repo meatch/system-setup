@@ -194,5 +194,8 @@ git clone https://github.com/meatch/Web-Starter-Project.git $finalFolder
 echo "Web Starter Project: remove .git versioning from project"
 rm -rf "$finalFolder/.git"
 
+echo "Web Starter Project: create .env from example"
+cp "$finalFolder/.env.example" "$finalFolder/.env"
+
 echo "Web Starter Project: Open $finalFolder in Finder"
 open $finalFolder
