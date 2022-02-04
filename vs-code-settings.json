@@ -1,4 +1,7 @@
 {
+    "typescript.suggest.autoImports": false,
+    "javascript.suggest.autoImports": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
     "security.workspace.trust.enabled": false,
     "workbench.editor.enablePreview": false,
     "dashboard.projectData": null,
@@ -21,6 +24,7 @@
     "explorer.confirmDragAndDrop": false,
     "bracketPairColorizer.depreciation-notice": false,
     "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
     "window.zoomLevel": 1,
-    "explorer.compactFolders": false
+    "terminal.integrated.defaultProfile.osx": "zsh"
 }
