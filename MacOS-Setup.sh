@@ -179,14 +179,18 @@ else
 fi
 
 ###################
-# Update Git Author and Email
+# Update Git Settings
 ###################
 
-# Update Git Author Full Name
+echo "Update Git Author Name and Email"
 git config --global user.name "$ufname $ulname"
-
-# Update Git Author Email
 git config --global user.email "$uemail"
+
+echo "Use VS Code as Git Editor"
+git config --global core.editor "code --wait"
+
+echo "Set git default branch back to the original \"master\" branch. In case they tried to change it to main; which is silly."
+git config --global init.defaultbranch "master"
 
 
 ###################
