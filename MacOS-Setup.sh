@@ -35,10 +35,17 @@ function toTitleCase {
     echo $title
 }
 
-
 ###################
 # Capture User Details in bash prompt 
 ###################
+read -p "Are you enroled in Web 1? y|n: " enrolledInWeb1
+courseName="Web2"
+courseBranch="web2"
+if [ $enrolledInWeb1 == "y" ]; then
+    courseName="Web1"
+    courseBranch="web1"
+fi
+
 read -p "Enter your First Name: " userfirstname
 ufname=$(toTitleCase $userfirstname)
 
@@ -48,7 +55,8 @@ ulname=$(toTitleCase $userlastname)
 read -p "Enter your Email: " useremail
 uemail=$(toLowerCase $useremail)
 
-echo "User Details: Name: $ufname $ulname, Email: $uemail"
+
+echo "User Details: Name: $ufname $ulname, Email: $uemail attending $courseName, repo branch $courseBranch"
 
 
 ###################
@@ -156,7 +164,7 @@ curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-se
 
 # VS Code Plugins
 echo "VS Code: Install Extensions: https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
 
 # VS Code Snippets
 if [ -f "$HOME/Library/Application Support/Code/User/snippets/c1.code-snippets" ]; then
@@ -184,12 +192,12 @@ git config --global user.email "$uemail"
 ###################
 # Web Starter Project
 ###################
-finalFolder="$HOME/Desktop/Web1-$ulname-$ufname-Final"
+finalFolder="$HOME/Desktop/$courseName-$ulname-$ufname-Final"
 
 echo "Your Final Folder: $finalFolder"
 
 echo "Web Starter Project: Git clone app to desktop"
-git clone https://github.com/meatch/Web-Starter-Project.git $finalFolder
+git clone --branch $courseBranch https://github.com/meatch/Web-Starter-Project.git $finalFolder
 
 echo "Web Starter Project: remove .git versioning from project"
 rm -rf "$finalFolder/.git"
