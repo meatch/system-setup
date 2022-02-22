@@ -143,6 +143,10 @@ nvm alias default 14
 echo "brew: Install Yarn"
 brew install yarn
 
+# Heroku CLI
+echo "brew: Install Heroku"
+brew tap heroku/brew && brew install heroku
+
 # Google Chrome
 if [ -d "/Applications/Google Chrome.app" ]; then
     echo "Google Chrome Already installed"
