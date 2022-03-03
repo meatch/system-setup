@@ -143,6 +143,13 @@ nvm alias default 14
 echo "brew: Install Yarn"
 brew install yarn
 
+echo "brew: Install PHP and Composer"
+brew install php
+brew install composer
+
+echo "brew: Install Sequel Ace Database Manager"
+brew install --cask sequel-ace
+
 # Heroku CLI
 echo "brew: Install Heroku"
 brew tap heroku/brew && brew install heroku
