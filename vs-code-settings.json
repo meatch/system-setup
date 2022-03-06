@@ -25,6 +25,9 @@
     "bracketPairColorizer.depreciation-notice": false,
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
-    "window.zoomLevel": 1,
-    "terminal.integrated.defaultProfile.osx": "zsh"
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "files.trimTrailingWhitespace": true
 }
