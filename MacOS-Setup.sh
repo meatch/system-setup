@@ -36,7 +36,7 @@ function toTitleCase {
 }
 
 ###################
-# Capture User Details in bash prompt 
+# Capture User Details in bash prompt
 ###################
 read -p "Are you enroled in Web 1? y|n: " enrolledInWeb1
 courseName="Web2"
@@ -60,7 +60,7 @@ echo "User Details: Name: $ufname $ulname, Email: $uemail attending $courseName,
 
 
 ###################
-# Homebrew 
+# Homebrew
 ###################
 echo "Install or Update Homebrew"
 which -s brew
@@ -147,10 +147,12 @@ echo "brew: Install PHP and Composer"
 brew install php
 brew install composer
 
+echo "brew: Install Mongo DB Compass"
+brew install --cask mongodb-compass
+
 echo "brew: Install Sequel Ace Database Manager"
 brew install --cask sequel-ace
 
-# Heroku CLI
 echo "brew: Install Heroku"
 brew tap heroku/brew && brew install heroku
 
