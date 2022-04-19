@@ -13,6 +13,7 @@
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.detectIndentation": false,
+    "editor.formatOnSave": false,
     "mssql.connections": [
         {
             "server": "{{put-server-name-here}}",
@@ -29,5 +30,8 @@
     "[xml]": {
         "editor.defaultFormatter": "DotJoshJohnson.xml"
     },
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": 1
 }
