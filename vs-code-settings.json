@@ -33,5 +33,7 @@
     "files.trimTrailingWhitespace": true,
     "debug.onTaskErrors": "debugAnyway",
     "diffEditor.ignoreTrimWhitespace": false,
+    "phpmd.enabled": false,
+    "extensions.autoUpdate": false,
     "window.zoomLevel": 1
 }

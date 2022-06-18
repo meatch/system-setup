@@ -1,6 +1,5 @@
 code --install-extension aaron-bond.better-comments
 code --install-extension alefragnani.Bookmarks
-code --install-extension ban.spellright
 code --install-extension bradgashler.htmltagwrap
 code --install-extension calebporzio.better-phpunit
 code --install-extension christian-kohler.path-intellisense
@@ -20,7 +19,9 @@ code --install-extension Gruntfuggly.todo-tree
 code --install-extension HookyQR.JSDocTagComplete
 code --install-extension huizhou.githd
 code --install-extension humao.rest-client
+code --install-extension jakebathman.mysql-syntax
 code --install-extension janisdd.vscode-edit-csv
+code --install-extension jmrog.vscode-nuget-package-manager
 code --install-extension kokororin.vscode-phpfmt
 code --install-extension kruemelkatze.vscode-dashboard
 code --install-extension lamartire.git-indicators
@@ -28,17 +29,16 @@ code --install-extension michelemelluso.code-beautifier
 code --install-extension mikestead.dotenv
 code --install-extension mrmlnc.vscode-scss
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-dotnettools.csharp
 code --install-extension ms-mssql.data-workspace-vscode
 code --install-extension ms-mssql.mssql
 code --install-extension ms-mssql.sql-database-projects-vscode
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.Theme-MarkdownKit
-code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension neilbrayfield.php-docblocker
 code --install-extension oderwat.indent-rainbow
 code --install-extension onecentlin.laravel-blade
 code --install-extension sadesyllas.vscode-workspace-switcher
-code --install-extension Shan.code-settings-sync
 code --install-extension SirTori.indenticator
 code --install-extension sleistner.vscode-fileutils
 code --install-extension styled-components.vscode-styled-components
