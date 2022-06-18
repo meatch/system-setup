@@ -72,3 +72,10 @@ We will manually add these to your windows system together.
 
 * [Download VS Code snippets.zip](https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true)
 * [VS Code settings.json](https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json)
+
+
+## 6. Download the Web Starter Project
+
+1. Run the following in Bash Terminal `git clone https://github.com/meatch/Web-Starter-Project.git`
+2. Rename Folder to `Web1-Last-First-Final`. Replacing your First and Last Name accordingly
+3. Remove `.git` folder in root of Starter Project Folder
