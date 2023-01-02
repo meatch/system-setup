@@ -222,5 +222,5 @@ rm -rf "$finalFolder/.git"
 echo "Web Starter Project: create .env from example"
 cp "$finalFolder/.env.example" "$finalFolder/.env"
 
-echo "Web Starter Project: Open $finalFolder in Finder"
-open $finalFolder
+echo "Web Starter Project: Open $finalFolder in VS Code"
+code $finalFolder
