@@ -220,10 +220,9 @@ if [ -f "$HOME/Library/Application Support/Code/User/snippets/c1.code-snippets" 
 else
     echo "VS Code: Add Snippets"
 
-    mkdir "$HOME/Library/Application Support/Code/User/snippets"
-    curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true > "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
-    unzip "$HOME/Library/Application Support/Code/User/snippets/temp.zip" -d "$HOME/Library/Application Support/Code/User/snippets"
-    rm "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
+    curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/snippets.zip?raw=true > "$HOME/Library/Application Support/Code/User/temp-mitch-snippets.zip"
+    unzip "$HOME/Library/Application Support/Code/User/temp-mitch-snippets.zip" -d "$HOME/Library/Application Support/Code/User/"
+    rm "$HOME/Library/Application Support/Code/User/temp-mitch-snippets.zip"
 fi
 
 # Open VS Code User in Finder to check settings and snippets
