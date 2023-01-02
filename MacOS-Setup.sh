@@ -207,7 +207,7 @@ curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-se
 # VS Code Plugins
 echo "MacOS Web Essentials: VS Code: Plugins"
 echo "VS Code: Install Extensions: https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh"
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
 
 # VS Code Snippets
 echo "MacOS Web Essentials: VS Code: Snippets"
