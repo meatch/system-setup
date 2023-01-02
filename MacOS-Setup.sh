@@ -134,8 +134,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 ###################
 # Install the rest of the Apps we need.
 ###################
-
-# VS Code TODO: Move up and open as soon as possible so user initialized prefs are ready for copying of settings
 echo "MacOS Web Essentials: Visual Studio Code (VS Code)"
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     echo "Visual Studio Code Already installed"
@@ -143,6 +141,9 @@ else
     echo "Install Visual Studio Code"
     brew install visual-studio-code
 fi
+
+echo "MacOS Web Essentials: Visual Studio Code (VS Code): Open to ensure user settings have been initialized (if never opened before)."
+open -a /Applications/Visual\ Studio\ Code.app
 
 echo "MacOS Web Essentials: Install Node Version Manager (NVM)"
 
