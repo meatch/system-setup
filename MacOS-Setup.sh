@@ -36,15 +36,19 @@ function toTitleCase {
 }
 
 ###################
+# Working Directory
+###################
+cd ~/Desktop
+
+###################
+# Make sure xcode is installed
+###################
+xcode-select --install
+
+###################
 # Capture User Details in bash prompt
 ###################
-read -p "Are you enroled in Web 1? y|n: " enrolledInWeb1
-courseName="Web2"
-courseBranch="web2"
-if [ $enrolledInWeb1 == "y" ]; then
-    courseName="Web1"
-    courseBranch="web1"
-fi
+courseName="uclax-web1"
 
 read -p "Enter your First Name: " userfirstname
 ufname=$(toTitleCase $userfirstname)
@@ -55,8 +59,7 @@ ulname=$(toTitleCase $userlastname)
 read -p "Enter your Email: " useremail
 uemail=$(toLowerCase $useremail)
 
-
-echo "User Details: Name: $ufname $ulname, Email: $uemail attending $courseName, repo branch $courseBranch"
+echo "User Details: Name: $ufname $ulname, Email: $uemail attending $courseName"
 
 
 ###################
@@ -119,7 +122,6 @@ fi
 # Manual sourcing of VS Code code command
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin"
 
-
 ###################
 # Install the rest of the Apps we need.
 ###################
@@ -134,27 +136,14 @@ fi
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-echo "NVM: Install Node Version 14"
-nvm install 14
+echo "NVM: Install Node Version 18"
+nvm install 18.12.1
 
-echo "NVM: Make Node Version 14 the default"
-nvm alias default 14
+echo "NVM: Make Node Version 18 the default"
+nvm alias default 18.12.1
 
 echo "brew: Install Yarn"
 brew install yarn
-
-echo "brew: Install PHP and Composer"
-brew install php
-brew install composer
-
-echo "brew: Install Mongo DB Compass"
-brew install --cask mongodb-compass
-
-echo "brew: Install Sequel Ace Database Manager"
-brew install --cask sequel-ace
-
-echo "brew: Install Heroku"
-brew tap heroku/brew && brew install heroku
 
 # Google Chrome
 if [ -d "/Applications/Google Chrome.app" ]; then
@@ -209,18 +198,15 @@ git config --global init.defaultbranch "master"
 ###################
 # Web Starter Project
 ###################
-finalFolder="$HOME/Desktop/$courseName-$ulname-$ufname-Final"
+projectFolder="$courseName-$ulname-$ufname"
+echo "Your Project Folder: $projectFolder"
 
-echo "Your Final Folder: $finalFolder"
+echo "Installing Vite React"
+npm create vite@latest $projectFolder -- --template react
 
-echo "Web Starter Project: Git clone app to desktop"
-git clone --branch $courseBranch https://github.com/meatch/Web-Starter-Project.git $finalFolder
+echo "Web Starter Project: Open $projectFolder in VS Code"
+code $projectFolder
 
-echo "Web Starter Project: remove .git versioning from project"
-rm -rf "$finalFolder/.git"
-
-echo "Web Starter Project: create .env from example"
-cp "$finalFolder/.env.example" "$finalFolder/.env"
-
-echo "Web Starter Project: Open $finalFolder in VS Code"
-code $finalFolder
+# Open VS Code User to check settings and snippets
+echo "Open VS Code User to check settings and snippets"
+open ~/Library/Application\ Support/Code/User/
