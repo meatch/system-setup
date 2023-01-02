@@ -1,24 +1,26 @@
-## Course Prep
+# Course Prep
+
 Do the following each term to prep this repo for class
 
-## Head over to the VS Code User Folder
+1. Head over to the VS Code User Folder
 
-`open /Users/meatch/Library/Application\ Support/Code/User/`
+    ```bash
+    open ~/Library/Application\ Support/Code/User/
+    ```
 
-## Update vs-code-settnings.json
+2. Copy contents of `User/settings.json` into `vs-code-settings.json`
 
-Copy contents of `User/settings.json` into `vs-code-settings.json`
+3. Update snippets.zip
 
-## Update snippets.zip
-1. Compress snippets folder and its contents
-2. replace `snippets.zip` in root of repo <------
+   1. Compress snippets folder and its contents
+   2. replace `snippets.zip` in root of repo <------
 
-## Update VS Code Extensions
+4. Update VS Code Extensions
 
-1. List Installed Extensions
+   1. List Installed Extensions
 
-```
-code --list-extensions | xargs -L 1 echo code --install-extension
-```
+      ```bash
+      code --list-extensions | xargs -L 1 echo code --install-extension
+      ```
 
-2. Update `vs-code-extensions.sh` <----
+   2. Update `vs-code-extensions.sh` <----
