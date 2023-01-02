@@ -23,7 +23,6 @@
         }
     ],
     "explorer.confirmDragAndDrop": false,
-    "bracketPairColorizer.depreciation-notice": false,
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
     "terminal.integrated.defaultProfile.osx": "zsh",
@@ -35,5 +34,56 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "phpmd.enabled": false,
     "extensions.autoUpdate": false,
-    "window.zoomLevel": 1
+    "prettier.configPath": "~/meatch_prefs/.prettierrc",
+    "vsicons.dontShowNewVersionMessage": true,
+    "git.confirmSync": false,
+    "prettier.jsxSingleQuote": true,
+    "javascript.format.semicolons": "insert",
+    "window.commandCenter": false,
+    "sonarlint.connectedMode.connections.sonarqube": [],
+    "files.exclude": {
+        "**/.vs": true,
+        "**/bin": true,
+        "**/obj": true
+    },
+    "git.suggestSmartCommit": false,
+    "[yaml]":  {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.autoIndent": "none"
+    },
+    "files.associations": {
+        "*.yml": "yaml",
+        ".env.docker": "dotenv",
+        ".env.stage": "dotenv",
+        ".env.prod": "dotenv",
+        ".env": "dotenv",
+        ".env.do.stage": "dotenv",
+        ".env.port": "dotenv",
+        ".env-cmdrc": "json"
+    },
+    "editor.accessibilitySupport": "off",
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-server": true,
+        "live-preview": true
+    },
+    "terminal.external.osxExec": "warp.app",
+    "[sql]": {
+        "editor.defaultFormatter": "ms-mssql.mssql"
+    },
+    "todo-tree.filtering.excludeGlobs":["**/node_modules"],
+    "todo-tree.general.schemes": [
+        "file",
+        "ssh",
+        "vscode-notebook-cell"
+    ],
+    "window.zoomLevel": 2,
+    "sonarlint.rules": {
+        "javascript:S6481": {
+            "level": "off"
+        },
+        "javascript:S6480": {
+            "level": "off"
+        }
+    }
 }
