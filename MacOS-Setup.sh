@@ -19,7 +19,11 @@ then
     abort "Bash is required to interpret this script."
 fi
 
-echo "MacOS: Pre-Setup: Installing MacOS Terminal And App Management Software"
+###################
+# Init
+###################
+
+echo "MacOS Web Essentials: Start"
 
 function wordUpperCaseFirst {
     echo $(tr '[:lower:]' '[:upper:]' <<< ${1:0:1})${1:1}
@@ -38,17 +42,16 @@ function toTitleCase {
 ###################
 # Working Directory
 ###################
-cd ~/Desktop
+echo "MacOS Web Essentials: Switch to Desktop working directory."
 
-###################
-# Make sure xcode is installed
-###################
-xcode-select --install
+cd ~/Desktop
 
 ###################
 # Capture User Details in bash prompt
 ###################
-courseName="uclax-web1"
+echo "MacOS Web Essentials: User specific settings"
+
+courseName="Uclax-Web1"
 
 read -p "Enter your First Name: " userfirstname
 ufname=$(toTitleCase $userfirstname)
@@ -61,11 +64,11 @@ uemail=$(toLowerCase $useremail)
 
 echo "User Details: Name: $ufname $ulname, Email: $uemail attending $courseName"
 
-
 ###################
 # Homebrew
 ###################
-echo "Install or Update Homebrew"
+echo "MacOS Web Essentials: Install or Update Homebrew"
+
 which -s brew
 if [[ $? != 0 ]] ; then
     echo "Install Homebrew"
@@ -78,6 +81,8 @@ fi
 ###################
 # Zsh
 ###################
+echo "MacOS Web Essentials: Install Zsh"
+
 if [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
     echo "ZSH is already installed."
 elif [ -n "`$SHELL -c 'echo $BASH_VERSION'`" ]; then
@@ -93,6 +98,8 @@ fi
 ###################
 # Oh My Zsh
 ###################
+echo "MacOS Web Essentials: Install Oh-My-Zsh"
+
 if [ -d ~/.oh-my-zsh ]; then
     echo "Oh-My-Zsh Already installed"
 else
@@ -103,6 +110,8 @@ fi
 ###################
 # Update .zshrc with app specific tools
 ###################
+echo "MacOS Web Essentials: Configuring Bash Profiles"
+
 # NVM Support
 if grep -q NVM_DIR ~/.zshrc; then
     echo "Update .zshrc: Already Exists: NVM Support"
@@ -125,6 +134,18 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 ###################
 # Install the rest of the Apps we need.
 ###################
+
+# VS Code TODO: Move up and open as soon as possible so user initialized prefs are ready for copying of settings
+echo "MacOS Web Essentials: Visual Studio Code (VS Code)"
+if [ -d "/Applications/Visual Studio Code.app" ]; then
+    echo "Visual Studio Code Already installed"
+else
+    echo "Install Visual Studio Code"
+    brew install visual-studio-code
+fi
+
+echo "MacOS Web Essentials: Install Node Version Manager (NVM)"
+
 if [[ -f $HOME/.nvm/nvm.sh ]] ; then
     echo "NVM already Installed"
 else
@@ -142,10 +163,9 @@ nvm install 18.12.1
 echo "NVM: Make Node Version 18 the default"
 nvm alias default 18.12.1
 
-echo "brew: Install Yarn"
-brew install yarn
-
 # Google Chrome
+echo "MacOS Web Essentials: Install Google Chrome"
+
 if [ -d "/Applications/Google Chrome.app" ]; then
     echo "Google Chrome Already installed"
 else
@@ -153,22 +173,47 @@ else
     brew install google-chrome
 fi
 
-# VS Code
-if [ -d "/Applications/Visual Studio Code.app" ]; then
-    echo "Visual Studio Code Already installed"
-else
-    echo "Install Visual Studio Code"
-    brew install visual-studio-code
-fi
+
+
+###################
+# Update Git Settings
+###################
+
+echo "MacOS Web Essentials: Git: Update Author Name and Email"
+git config --global user.name "$ufname $ulname"
+git config --global user.email "$uemail"
+
+echo "MacOS Web Essentials: Git: Use VS Code as Git Editor"
+git config --global core.editor "code --wait"
+
+echo "MacOS Web Essentials: Git: Set git default branch back to the original \"master\" branch. In case they tried to change it to main; which is silly."
+git config --global init.defaultbranch "master"
+
+
+###################
+# Web Starter Project
+###################
+echo "MacOS Web Essentials: Course Project Folder"
+projectFolder="$courseName-$ulname-$ufname"
+echo "MacOS Web Essentials: Course Project Folder: Name: $projectFolder"
+
+echo "MacOS Web Essentials: Course Project Folder: Vite React Install"
+npm create vite@latest $projectFolder -- --template react
+
+echo "MacOS Web Essentials: Course Project Folder: Open $projectFolder in VS Code"
+code $projectFolder
 
 # VS Code Settings
+echo "MacOS Web Essentials: VS Code: Settings"
 curl -sS https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-settings.json > "$HOME/Library/Application Support/Code/User/settings.json"
 
 # VS Code Plugins
+echo "MacOS Web Essentials: VS Code: Plugins"
 echo "VS Code: Install Extensions: https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh"
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/meatch/system-setup/master/vs-code-extensions.sh)"
 
 # VS Code Snippets
+echo "MacOS Web Essentials: VS Code: Snippets"
 if [ -f "$HOME/Library/Application Support/Code/User/snippets/c1.code-snippets" ]; then
     echo "VS Code: Snippets Already Installed"
 else
@@ -180,33 +225,7 @@ else
     rm "$HOME/Library/Application Support/Code/User/snippets/temp.zip"
 fi
 
-###################
-# Update Git Settings
-###################
-
-echo "Update Git Author Name and Email"
-git config --global user.name "$ufname $ulname"
-git config --global user.email "$uemail"
-
-echo "Use VS Code as Git Editor"
-git config --global core.editor "code --wait"
-
-echo "Set git default branch back to the original \"master\" branch. In case they tried to change it to main; which is silly."
-git config --global init.defaultbranch "master"
-
-
-###################
-# Web Starter Project
-###################
-projectFolder="$courseName-$ulname-$ufname"
-echo "Your Project Folder: $projectFolder"
-
-echo "Installing Vite React"
-npm create vite@latest $projectFolder -- --template react
-
-echo "Web Starter Project: Open $projectFolder in VS Code"
-code $projectFolder
-
-# Open VS Code User to check settings and snippets
-echo "Open VS Code User to check settings and snippets"
+# Open VS Code User in Finder to check settings and snippets
+echo "MacOS Web Essentials: VS Code: Open Finder VS Code User Folder to review settings and snippets"
 open ~/Library/Application\ Support/Code/User/
+
