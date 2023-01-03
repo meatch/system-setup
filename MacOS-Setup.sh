@@ -51,7 +51,7 @@ cd ~/Desktop
 ###################
 echo "MacOS Web Essentials: User specific settings"
 
-courseName="Uclax-Web1"
+courseName="UCLAX-Web1"
 
 read -p "Enter your First Name: " userfirstname
 ufname=$(toTitleCase $userfirstname)
